@@ -14,11 +14,13 @@ namespace ProyectoPassword.Services.PassService
     public class PassService : IPassRepo
     {
         public SQLiteAsyncConnection _database;
+        private readonly HttpClient _httpClient;
 
-        public PassService(string dbPath)
+        public PassService(string dbPath, HttpClient httpClient)
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<PasSword>().Wait();
+            _httpClient = httpClient;
            
         }
 
@@ -50,6 +52,5 @@ namespace ProyectoPassword.Services.PassService
         {
             return await Task.FromResult(await _database.Table<PasSword>().ToListAsync());
         }
-        
     }
 }

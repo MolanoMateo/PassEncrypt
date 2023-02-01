@@ -33,7 +33,9 @@
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <StackLayout Orientation="Horizontal">
+            
             <Button Text="Guardar" BackgroundColor="Green" Command="{Binding SavePassCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Generar Contraseña" BackgroundColor="Blue" Command="{Binding ObtenerPasswordCommand}" HorizontalOptions="FillAndExpand"/>
             <Button Text="Cancelar" BackgroundColor="Red" Command="{Binding OnCancelCommand}" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </StackLayout>

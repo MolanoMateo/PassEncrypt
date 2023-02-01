@@ -12,7 +12,7 @@ public partial class App : Application
 		{
 			if(_passService == null)
 			{
-				_passService = new PassService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PasswordDB.db3"));
+				_passService = new PassService(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PasswordDB.db3"),null);
 			}
 			return _passService;
 		}
