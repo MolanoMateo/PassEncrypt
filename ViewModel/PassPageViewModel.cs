@@ -13,10 +13,10 @@ namespace ProyectoPassword.ViewModel
     public partial class PassPageViewModel:BasePassViewModel
     {
         public ObservableCollection<PasSword> PassList { get; }
-        public PassPageViewModel()
+        public PassPageViewModel(INavigation navigation)
         {
             PassList = new ObservableCollection<PasSword>();
-            
+            Navigation = navigation;
         }
         
 
@@ -52,13 +52,20 @@ namespace ProyectoPassword.ViewModel
             }
         }
         [ICommand]
-        private async void PassDelete(PasSword passinfo)
+        private async void PassTappedDelete(PasSword passinfo)
         {
             if(passinfo == null)
                 return;
             await App.PassService.DeletePassAsync(passinfo.Id);
             await LoadPass();
             OnAppearing();
+        }
+        [ICommand]
+        private async void PassTappedEdit(PasSword passinfo)
+        {
+            if (passinfo == null)
+                return;
+            await Navigation.PushAsync(new NewPassPage(passinfo));
         }
 
     }

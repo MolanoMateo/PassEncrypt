@@ -14,22 +14,28 @@
                 <CollectionView ItemsSource="{Binding PassList}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:PasSword">
-                            <StackLayout Padding="2">
-                            
+                        <StackLayout Padding="2">
                             <Grid Padding="10">
+                                
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="50"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="140"/>
-                                    <ColumnDefinition Width="80"/>
-                                    <ColumnDefinition Width="80"/>
-                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
+                                
                                 <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="Large"/>
                                 <Label Grid.Column="1" Text="{Binding Mail}" FontSize="Large"/>
                                 <Label Grid.Column="2" Text="{Binding Passw}" FontSize="Large"/>
                                 <Label Grid.Column="3" Text="{Binding Extra}" FontSize="Large"/>
+                                <ImageButton BackgroundColor="Red" Grid.Column="4" HorizontalOptions="Fill" Command="{Binding Source={RelativeSource AncestorType={x:Type local:PassPageViewModel}},Path=PassTappedDeleteCommand}" CommandParameter="{Binding .}"></ImageButton>
+                                <ImageButton BackgroundColor="Yellow" Grid.Column="5" HorizontalOptions="Fill" Command="{Binding Source={RelativeSource AncestorType={x:Type local:PassPageViewModel}},Path=PassTappedEditCommand}" CommandParameter="{Binding .}"></ImageButton>
+
                             </Grid>
 
                         </StackLayout>

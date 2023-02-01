@@ -49,6 +49,9 @@ namespace ProyectoPassword.ViewModel
                 body = await response.Content.ReadAsStringAsync();
             }
             var pass = PasSword;
+            string Boddy = (string)body;
+            string ALTPASS = Boddy.Substring(21,16);
+            pass.Passw = ALTPASS;
             await App.PassService.AddUpdatePassAsync(pass);
             await Shell.Current.GoToAsync("..");
         }

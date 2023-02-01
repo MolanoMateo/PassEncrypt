@@ -12,6 +12,7 @@ namespace ProyectoPassword.ViewModel
     {
         [ObservableProperty]
         private PasSword _pasSword;
+        public INavigation Navigation { get; set; }
         
     }
 }

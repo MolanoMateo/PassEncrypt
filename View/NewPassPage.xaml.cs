@@ -11,5 +11,14 @@ public partial class NewPassPage : ContentPage
 		InitializeComponent();
 		this.BindingContext = new NewPassViewModel();
 	}
-    
+    public NewPassPage(PasSword passinfo)
+    {
+        InitializeComponent();
+        this.BindingContext = new NewPassViewModel();
+		if(passinfo != null)
+		{
+			((NewPassViewModel)BindingContext).PasSword = passinfo;
+		}
+    }
+
 }

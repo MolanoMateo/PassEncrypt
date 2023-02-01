@@ -14,29 +14,29 @@
         </VerticalStackLayout>
         <VerticalStackLayout>
             <Label Text="NickName" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Name,Mode=TwoWay}" FontSize="Medium"/>
+            <Entry Text="{Binding PasSword.Name,Mode=TwoWay}" TextColor="Black" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
             <Label Text="Mail" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Mail,Mode=TwoWay}" FontSize="Medium"/>
+            <Entry Text="{Binding PasSword.Mail,Mode=TwoWay}" TextColor="Black" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
             <Label Text="Contraseña" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Passw,Mode=TwoWay}" FontSize="Medium"/>
+            <Entry Text="{Binding PasSword.Passw,Mode=TwoWay}" TextColor="Black" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
             <Label Text="Información Adicional" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Extra,Mode=TwoWay}" FontSize="Medium"/>
+            <Entry Text="{Binding PasSword.Extra,Mode=TwoWay}" TextColor="Black" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <StackLayout Orientation="Horizontal">
-            
-            <Button Text="Guardar" BackgroundColor="Green" Command="{Binding SavePassCommand}" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Generar Contraseña" BackgroundColor="Blue" Command="{Binding ObtenerPasswordCommand}" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Cancelar" BackgroundColor="Red" Command="{Binding OnCancelCommand}" HorizontalOptions="FillAndExpand"/>
+
+            <Button Text="Guardar" BackgroundColor="Green" TextColor="Black" Command="{Binding SavePassCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Generar Contraseña" BackgroundColor="Blue" TextColor="Black" Command="{Binding ObtenerPasswordCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Cancelar" BackgroundColor="Red" TextColor="Black" Command="{Binding OnCancelCommand}" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

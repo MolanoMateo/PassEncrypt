@@ -8,7 +8,7 @@ public partial class PassPage : ContentPage
 	public PassPage()
 	{
 		InitializeComponent();
-		this.BindingContext = passPageViewModel=new PassPageViewModel();
+		this.BindingContext = passPageViewModel=new PassPageViewModel(Navigation);
 	}
 	protected override void OnAppearing()
 	{
