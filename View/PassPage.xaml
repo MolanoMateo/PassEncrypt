@@ -2,13 +2,47 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoPassword.View.PassPage"
+             xmlns:models="clr-namespace:ProyectoPassword.Models"
+             xmlns:local="clr-namespace:ProyectoPassword.ViewModel"
              Title="PassPage">
+
+
     
-    <ContentPage.ToolbarItems>
-        <ToolbarItem />
-    </ContentPage.ToolbarItems>
-    <VerticalStackLayout>
+        
+        <StackLayout>
+            <RefreshView x:DataType="local:PassPageViewModel" Command="{Binding LoadPassCommand}" IsRefreshing="{Binding IsBusy}">
+                <CollectionView ItemsSource="{Binding PassList}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:PasSword">
+                            <StackLayout Padding="2">
+                            
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="70"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="Large"/>
+                                <Label Grid.Column="1" Text="{Binding Mail}" FontSize="Large"/>
+                                <Label Grid.Column="2" Text="{Binding Passw}" FontSize="Large"/>
+                                <Label Grid.Column="3" Text="{Binding Extra}" FontSize="Large"/>
+                            </Grid>
+
+                        </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
         <Button Text="Nueva contraseña" BackgroundColor="Red" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="200" Margin="0,15,0,0" Command="{Binding OnAddPassCommand}"/>
-    </VerticalStackLayout>
+
+        <Label></Label>
+        </StackLayout>
+        
+   
+    
     
 </ContentPage>

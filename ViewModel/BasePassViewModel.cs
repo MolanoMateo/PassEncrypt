@@ -12,5 +12,6 @@ namespace ProyectoPassword.ViewModel
     {
         [ObservableProperty]
         private PasSword _pasSword;
+        
     }
 }

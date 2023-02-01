@@ -13,23 +13,23 @@
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
-            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Name,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <Label Text="NickName" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Name,Mode=TwoWay}" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
-            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Mail,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <Label Text="Mail" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Mail,Mode=TwoWay}" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
-            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Passw,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <Label Text="Contraseña" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Passw,Mode=TwoWay}" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout>
-            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
-            <Entry Text="{Binding PasSword.Extra,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <Label Text="Información Adicional" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Extra,Mode=TwoWay}" FontSize="Medium"/>
             <BoxView HeightRequest="0.5" Color="Gray"/>
         </VerticalStackLayout>
         <StackLayout Orientation="Horizontal">

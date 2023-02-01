@@ -1,10 +1,13 @@
-﻿using ProyectoPassword.Models;
+﻿using Newtonsoft.Json;
+using ProyectoPassword.Models;
+using ProyectoPassword.Api;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ProyectoPassword.Services.PassService
 {
@@ -16,6 +19,7 @@ namespace ProyectoPassword.Services.PassService
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<PasSword>().Wait();
+           
         }
 
         public async Task<bool> AddUpdatePassAsync(PasSword passinfo)
@@ -46,5 +50,6 @@ namespace ProyectoPassword.Services.PassService
         {
             return await Task.FromResult(await _database.Table<PasSword>().ToListAsync());
         }
+        
     }
 }

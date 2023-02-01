@@ -11,4 +11,5 @@ public partial class NewPassPage : ContentPage
 		InitializeComponent();
 		this.BindingContext = new NewPassViewModel();
 	}
+    
 }
