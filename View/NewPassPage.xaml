@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoPassword.View.NewPassPage"
+             xmlns:local="clr-namespace:ProyectoPassword.ViewModel"
+             Title="Nueva Contraseña"
+             BackgroundColor="Beige">
+
+    <StackLayout Spacing="5" Padding="15" Margin="10">
+        <VerticalStackLayout IsVisible="false">
+            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Id,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <BoxView HeightRequest="0.5" Color="Gray"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Name,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <BoxView HeightRequest="0.5" Color="Gray"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Mail,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <BoxView HeightRequest="0.5" Color="Gray"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Passw,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <BoxView HeightRequest="0.5" Color="Gray"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="ID" FontSize="Medium" IsEnabled="False"/>
+            <Entry Text="{Binding PasSword.Extra,Mode=TwoWay}" FontSize="Medium" IsEnabled="False"/>
+            <BoxView HeightRequest="0.5" Color="Gray"/>
+        </VerticalStackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Guardar" BackgroundColor="Green" Command="{Binding SavePassCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Cancelar" BackgroundColor="Red" Command="{Binding OnCancelCommand}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
